@@ -1,0 +1,689 @@
+--2)
+
+CREATE (n:Ligne {Nom: 'T1'})
+
+ 
+--3)
+
+ 
+CREATE (s1:Station {Nom: 'BEAUZELLE - AEROSCOPIA'}),
+
+       (s2:Station {Nom: 'ANCELY'}),
+
+       (s3:Station {Nom: 'DEODAT DE SEVERAC'}),
+
+       (s4:Station {Nom: 'AVENUE DE MURET - MARCEL CAVAILLE'}),
+
+       (s5:Station {Nom: 'PLACE DU RELAIS'}),
+
+       (s6:Station {Nom: 'PASTEUR MAIRIE DE BLAGNAC'}),
+
+       (s7:Station {Nom: 'PURPAN'}),
+
+       (s8:Station {Nom: 'FER A CHEVAL'}),
+
+       (s9:Station {Nom: 'PARC DES EXPOSITIONS'}),
+
+       (s10:Station {Nom: 'ANDROMEDE LYCEE'}),
+
+       (s11:Station {Nom: 'PLACE GEORGES BRASSENS'}),
+
+       (s12:Station {Nom: 'GRAND NOBLE'}),
+
+       (s13:Station {Nom: 'ODYSSUD RITOURET'}),
+
+       (s14:Station {Nom: 'SERVANTY AIRBUS'}),
+
+       (s15:Station {Nom: 'ARENES ROMAINES'}),
+
+       (s16:Station {Nom: 'ARENES'}),
+
+       (s17:Station {Nom: 'CROIX DE PIERRE'}),
+
+       (s18:Station {Nom: 'PALAIS DE JUSTICE'}),
+
+       (s19:Station {Nom: 'GUYENNE BERRY'}),
+
+       (s20:Station {Nom: 'HIPPODROME'}),
+
+       (s21:Station {Nom: 'ILE DU RAMIER'}),
+
+       (s22:Station {Nom: 'AEROCONSTELLATION'}),
+
+       (s23:Station {Nom: 'PATINOIRE BARRADELS'}),
+
+       (s24:Station {Nom: 'CARTOUCHERIE'}),
+
+       (s25:Station {Nom: 'ZENITH'});
+
+ 
+--4)
+
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "PALAIS DE JUSTICE " AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:1} ]->(l);
+
+
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ILE DU RAMIER" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:2} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "FER A CHEVAL " AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:3} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "AVENUE DE MURET - MARCEL CAVAILLE" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:4} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "CROIX DE PIERRE" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:5} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "DEODAT DE SEVERAC" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:6} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ARENES" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:7} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "HIPPODROME" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:8} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ZENITH" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:9} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "CARTOUCHERIE" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:10} ]->(l);
+
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "PURPAN" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:11} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ARENES ROMAINES" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:12} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ANCELY" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:13} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "SERVANTY AIRBUS" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:14} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "GUYENNE BERRY" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:15} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "PASTEUR MAIRIE DE BLAGNAC" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:16} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "PLACE DU RELAIS" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:17} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ODYSSUD RITOURET" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:18} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "PATINOIRE BARRADELS " AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:19} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "GRAND NOBLE" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:20} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "PLACE GEORGES BRASSENS" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:21} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "ANDROMEDE LYCEE" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:22} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "BEAUZELLE - AEROSCOPIA" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:23} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = "AEROCONSTELLATION" AND l.Nom = "T1" 
+
+CREATE (s)-[:Relier {position:24} ]->(l);
+
+
+
+ 
+--5)
+
+CREATE (l:Ligne {Nom:'T2'}),
+
+(s1:Station {Nom:'NADOT'}),
+
+(s2:Station {Nom:'DAURAT'}),
+
+(s3:Station {Nom:'AEROPORT'}),
+
+(s1)-[:Relier {Position:14}]->(l),
+
+(s2)-[:Relier {Position:15}]->(l),
+
+(s3)-[:Relier {Position:16}]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'PALAIS DE JUSTICE' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:1} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'ILE DU RAMIER' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:2} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'FER A CHEVAL ' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:3} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'AVENUE DE MURET - MARCEL CAVAILLE' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:4} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'CROIX DE PIERRE' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:5} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'DEODAT DE SEVERAC' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:6} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'ARENES' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:7} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'HIPPODROME' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:8} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'ZENITH' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:9} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'CARTOUCHERIE' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:10} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'PURPAN' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:11} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'ARENES ROMAINES' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:12} ]->(l);
+
+ 
+MATCH (s:Station), (l:Ligne)
+
+WHERE s.Nom = 'ANCELY' AND l.Nom = 'T2' 
+
+CREATE (s)-[:Relier {Position:13} ]->(l);
+
+
+
+ 
+--6)
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PALAIS DE JUSTICE'
+
+SET s:Station:Terminus;
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='AEROPORT'
+
+SET s:Station:Terminus;
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='AEROCONSTELLATION'
+
+SET s:Station:Terminus;
+
+
+
+
+
+ 
+--7)
+
+ 
+MATCH (s1:Station {Nom: 'AEROCONSTELLATION'}), (s2:Station {Nom: 'BEAUZELLE - AEROSCOPIA'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'BEAUZELLE - AEROSCOPIA'}), (s2:Station {Nom: 'ANDROMEDE LYCEE'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'ANDROMEDE LYCEE'}), (s2:Station {Nom: 'PLACE GEORGES BRASSENS'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'PLACE GEORGES BRASSENS'}), (s2:Station {Nom: 'GRAND NOBLE'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'GRAND NOBLE'}), (s2:Station {Nom: 'PATINOIRE BARRADELS'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+MATCH (s1:Station {Nom: 'PATINOIRE BARRADELS'}), (s2:Station {Nom: 'ODYSSUD RITOURET'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+
+MATCH (s1:Station {Nom: 'ODYSSUD RITOURET'}), (s2:Station {Nom: 'PLACE DU RELAIS'})
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'PLACE DU RELAIS'}), (s2:Station {Nom: 'PASTEUR MAIRIE DE BLAGNAC'})
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'PASTEUR MAIRIE DE BLAGNAC'}), (s2:Station {Nom: 'GUYENNE BERRY'})
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+MATCH (s1:Station {Nom: 'GUYENNE BERRY'}), (s2:Station {Nom: 'SERVANTY AIRBUS'})
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+MATCH (s1:Station {Nom: 'SERVANTY AIRBUS'}), (s2:Station {Nom: 'ANCELY'})
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+ 
+MATCH (s1:Station {Nom: 'ANCELY'}), (s2:Station {Nom: 'ARENES ROMAINES'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+
+MATCH (s1:Station {Nom: 'ANCELY'}), (s2:Station {Nom: 'NADOT'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'NADOT'}), (s2:Station {Nom: 'DAURAT'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'DAURAT'}), (s2:Station {Nom: 'AEROPORT'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+
+MATCH (s1:Station {Nom: 'ARENES ROMAINES'}), (s2:Station {Nom: 'PURPAN'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+ 
+MATCH (s1:Station {Nom: 'PURPAN'}), (s2:Station {Nom: 'CARTOUCHERIE'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'CARTOUCHERIE'}), (s2:Station {Nom: 'ZENITH'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'ZENITH'}), (s2:Station {Nom: 'ARENES'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'ARENES'}), (s2:Station {Nom: 'DEODAT DE SEVERAC'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'DEODAT DE SEVERAC'}), (s2:Station {Nom: 'CROIX DE PIERRE'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'CROIX DE PIERRE'}), (s2:Station {Nom: 'AVENUE DE MURET - MARCEL CAVAILLE'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'AVENUE DE MURET - MARCEL CAVAILLE'}), (s2:Station {Nom: 'FER A CHEVAL'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'FER A CHEVAL'}), (s2:Station {Nom: 'ILE DU RAMIER'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+ 
+MATCH (s1:Station {Nom: 'ILE DU RAMIER'}), (s2:Station {Nom: 'PALAIS DE JUSTICE'})
+
+CREATE (s1)-[:Suivant]->(s2), (s2)-[:Précédent]->(s1);
+
+
+
+ 
+--8)
+
+MATCH (s:Station)
+
+WHERE s.Nom='BEAUZELLE - AEROSCOPIA'
+
+SET s.Coordonnées = '43.660255190540155, 1.3695073351998803';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ANCELY'
+
+SET s.Coordonnées = '43.61822059194139, 1.3969099594913592';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='DEODAT DE SEVERAC'
+
+SET s.Coordonnées = '43.58968999228208, 1.4215974932758333';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='AVENUE DE MURET - MARCEL CAVAILLE'
+
+SET s.Coordonnées = '43.58930245699192, 1.431780303223159';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PLACE DU RELAIS'
+
+SET s.Coordonnées = '43.63675043601977, 1.390062370823038';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PASTEUR MAIRIE DE BLAGNAC'
+
+SET s.Coordonnées = '43.63431428725223, 1.391288326642886';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PURPAN'
+
+SET s.Coordonnées = '43.60910724670237, 1.4020017448759767';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='FER A CHEVAL'
+
+SET s.Coordonnées = '43.59262535059158, 1.4354993849495137';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PARC DES EXPOSITIONS'
+
+SET s.Coordonnées = '43.66764678558389, 1.3599434505598818';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ANDROMEDE LYCEE'
+
+SET s.Coordonnées = '43.65482368011734, 1.373582581052039';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PLACE GEORGES BRASSENS'
+
+SET s.Coordonnées = '43.64853137849244, 1.3756419777020612';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='GRAND NOBLE'
+
+SET s.Coordonnées = '43.64475416885451, 1.3774639249252771';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ODYSSUD RITOURET'
+
+SET s.Coordonnées = '43.63624393633543, 1.3853418072225079';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='SERVANTY AIRBUS'
+
+SET s.Coordonnées = '43.62548540556057, 1.3934788817063195';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ARENES ROMAINES'
+
+SET s.Coordonnées = '43.614084692241846, 1.3983093859403868';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ARENES'
+
+SET s.Coordonnées = '43.59282790573297, 1.4179403080010227';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='CROIX DE PIERRE'
+
+SET s.Coordonnées = '43.58564645454621, 1.4278135154626364';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PALAIS DE JUSTICE'
+
+SET s.Coordonnées = '43.59274455178881, 1.4440361121619245';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='NADOT'
+
+SET s.Coordonnées = '43.62438397219017, 1.38676172502025';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='DAURAT'
+
+SET s.Coordonnées = '43.62884804052043, 1.3793727040106212';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='GUYENNE BERRY'
+
+SET s.Coordonnées = '43.63086502505967, 1.3917366126127855';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='HIPPODROME'
+
+SET s.Coordonnées = '43.59488281658855, 1.409430770561109';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ILE DU RAMIER'
+
+SET s.Coordonnées = '43.59220355154859, 1.440423260842914';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='AEROCONSTELLATION'
+
+SET s.Coordonnées = '43.6634556635563, 1.3626061300115517';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='PATINOIRE BARRADELS'
+
+SET s.Coordonnées = '43.64050780809167, 1.382557083334688';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='CARTOUCHERIE'
+
+SET s.Coordonnées = '43.60312658700244, 1.4076763932564624';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='ZENITH'
+
+SET s.Coordonnées = '43.60085148541479, 1.4113859345532493';
+
+ 
+MATCH (s:Station)
+
+WHERE s.Nom='AEROPORT'
+
+SET s.Coordonnées = '43.63134028241912, 1.3743750605910126';
+
