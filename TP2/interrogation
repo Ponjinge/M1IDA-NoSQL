@@ -1,0 +1,60 @@
+--1. Obtenir les nœuds :Ligne.
+match(n:Ligne) 
+return n
+
+--2. Obtenir le nom des lignes.
+match(n:Ligne) 
+return n.Nom
+
+--3. Obtenir les nœuds :Station de la ligne T1.
+MATCH (s:Station)-[:Relier]->(:Ligne {Nom: 'T1'})
+RETURN s
+
+--4. Obtenir les noms des stations de la ligne T1.
+MATCH (s:Station)-[:Relier]->(:Ligne {Nom: 'T1'})
+RETURN s.Nom
+
+--5. Obtenir le nom de la station dont les coordonnées sont 43.63134028241912, 1.3743750605910126.
+match(s: Station )
+where s.`Coordonnées` = '43.63134028241912, 1.3743750605910126'
+return s.Nom
+
+--6. Obtenir les nœuds terminus de la ligne T1.
+MATCH (s:Station:Terminus)-[:Relier]->(:Ligne {Nom: 'T1'})
+RETURN s
+
+
+--7. Obtenir les nœuds terminus de la ligne T1 et de la ligne T2.
+MATCH (s:Station:Terminus)-[:Relier]->(l:Ligne)
+WHERE l.Nom IN ['T1', 'T2']
+RETURN s, l
+
+
+--8. Obtenir les nœuds des stations en position 4 et 5 sur la ligne T1.
+MATCH (s:Station)-[r:Relier]->(:Ligne {Nom: 'T1'})
+WHERE r.position IN [4, 5]
+RETURN s
+
+--9. Obtenir le nœud de la troisième station sur la ligne T1 en partant du terminus Palais de Justice.
+MATCH (t:Station:Terminus {Nom: 'PALAIS DE JUSTICE'})-[:`Précédent`*3]->(s:Station)-[:Relier]->(:Ligne {Nom: 'T1'})
+RETURN s
+
+--10. Obtenir les nœuds des lignes où est situé la station Purpan.
+MATCH (s:Station {Nom: 'PURPAN'})-[:Relier]->(l:Ligne)
+RETURN l
+
+--11. Obtenir le nœud de la station suivant la station Purpan sur la ligne T1 dans le sens du terminus Palais de Justice.
+MATCH (s:Station {Nom: 'PURPAN'})-[:Suivant]->(next:Station)-[:Relier]->(:Ligne {Nom: 'T1'})
+RETURN next
+
+--12. Obtenir les nœuds des stations entre Purpan et Zénith.
+MATCH (start:Station {Nom: 'PURPAN'})-[:Suivant*]->(end:Station {Nom: 'ZENITH'})
+WITH start, end
+MATCH path = (start)-[:Suivant*]->(end)
+UNWIND nodes(path) AS station
+RETURN DISTINCT station
+
+--13. Obtenir les nœuds des stations communes aux lignes T1 et T2.
+MATCH (s:Station)-[:Relier]->(l1:Ligne {Nom: 'T1'}),
+      (s)-[:Relier]->(l2:Ligne {Nom: 'T2'})
+RETURN s
