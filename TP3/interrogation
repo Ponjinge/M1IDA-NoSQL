@@ -1,0 +1,32 @@
+//1. Obtenir le nœud de la personne nommée Tom Hanks
+MATCH (p:Person{name:"Tom Hanks"})
+RETURN p;
+
+//2. Obtenir les identifiants des nœuds correspondants à Tom Hanks et Charlize Theron.
+MATCH (p:Person) 
+WHERE p.name = "Tom Hanks" OR p.name = "Charlize Theron"
+RETURN id(p);
+
+//3. Obtenir le sous graphe du film intitulé Matrix avec les acteurs (ACTED_IN)
+MATCH (m:Movie{title:"The Matrix"})<-[:ACTED_IN]-(a:Person)
+RETURN m,a;
+
+//4. Obtenir le sous graphe des films dans lesquels a joué (ACTED_IN) Tom Hanks
+MATCH (m:Movie)<-[a:ACTED_IN]-(p:Person{name:"Tom Hanks"})
+RETURN m,a,p;
+
+//5. Obtenir le titre du film dans lequel Tom Hanks a joué (ACTED_IN) le rôle de Chuck Noland
+MATCH (m:Movie
+//6. Obtenir le sous graphe des films dans lesquels Meg Ryan et Tom Cruise ont joué (ACTED_IN) un rôle
+//7. Obtenir les personnes qui ont joué (ACTED_IN) un rôle dans un film
+//8. Obtenir le sous graphe des personnes en relation avec le film Top Gun
+//9. Obtenir le sous graphe des personnes en relation avec un film dans lequel a joué Tom Hanks
+//10. Obtenir les directeurs (DIRECTED) de films
+//11. Obtenir les films dirigés (DIRECTED) par Ron Howard
+//12. Obtenir les acteurs (personnes ayant jouées un rôle dans un film) ayant joué (ACTED_IN) dans un film dirigé (DIRECTED) par Ron Howard dans lequel Tom Hanks à joué (ACTED_IN)
+//13. Obtenir les films dirigés par Andy Wachowski (DIRECTED), écrit par Lana Wachowski (WROTE) et produits (PRODUCED) par Joel Silver (PRODUCED)
+//14. Obtenir les films dirigés (DIRECTED) et écrits (WROTE) par Andy et Lana Wachowski
+//15. Obtenir les films dirigés (DIRECTED), écrits (WROTE) et produits (PRODUCED) par la même personne
+//16. Obtenir les acteurs qui ont joué (ACTED_IN) dans un film dirigé (DIRECTED), écrit (WROTE) et produit (PRODUCED) par la même personne
+//17. Obtenir les films dirigés (DIRECTED) par deux personnes différentes
+//18. Obtenir les acteurs qui ont joué dans un film dirigé (DIRECTED) par deux personnes différentes 
